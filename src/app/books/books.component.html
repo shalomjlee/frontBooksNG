@@ -1,0 +1,19 @@
+<div *ngFor="let book of books">
+    <h2>
+        {{book.title}}
+    </h2>
+    <h3>
+        {{book.author}}
+    </h3>
+    <h4>
+        {{book.description}}
+    </h4>
+    <span>{{book.id}}</span>
+    <button (click)="eliminateBook(book.id)">X</button>
+</div>
+
+<button (click)="createBook(bookData)">Create a book</button>
+
+
+<input [(ngModel)] = "bookData.title" />
+<input [(ngModel)] = "bookData.author" />
